@@ -28,7 +28,6 @@ public class BarrowsScript extends Script implements SimplePaintable, SimpleMess
 
     public String status;
     public long startTime;
-    public boolean quickPrayers = true;
 
     public Hill targetHill = Hill.KARIL;
 
@@ -142,7 +141,7 @@ public class BarrowsScript extends Script implements SimplePaintable, SimpleMess
     private void loadPreset() {
         ctx.menuActions.clickButton(19076);
         if (ctx.onCondition(() -> ctx.client.getOpenInterfaceId() == 21553, 250, 10)) {
-            ctx.menuActions.sendAction(1701, -1, -1, 21593);//21593 - Preset #2 id
+            ctx.menuActions.sendAction(1701, -1, -1, 21593);//CHANGE HERE '21593' - Preset #2 id
             ctx.sleep(750, 1500);
             ctx.menuActions.clickButton(21566);
             ctx.onCondition(() -> ctx.client.getOpenInterfaceId() == -1, 250, 10);
